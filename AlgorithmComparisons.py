@@ -145,7 +145,7 @@ with pd.option_context('display.max_rows', None):
 # Graph the algorithm comparisons for each of the metrics.
 Yaxis = ["Accuracy", "Precision", "Recall", "F1"]
 for l in Yaxis:
-    g = sns.catplot(x="ModelName", y=l, kind="bar", size=4, aspect=1, data=ScoringMetricsConcat_DF,
+    g = sns.catplot(x="ModelName", y=l, kind="bar", height=4, aspect=1, data=ScoringMetricsConcat_DF,
                     palette="Set1", legend=False)
     g.fig.suptitle(bins[0][0] + ": " + l + " Score", fontsize=12)
     g.set_ylabels(l, fontsize=12)
